@@ -18,6 +18,7 @@ public class CurrencyConversionController {
     private CurrencyExchangeProxy proxy;
 
     //    http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+    //Wont work while using docker since you are using localhost in rest template
     @GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversion calculateCurrencyConversion(@PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity) {
 
